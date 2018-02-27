@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{586EF9BE-17D6-F9F5-B6BC-44C439E89DF2}|単体テスト">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FollowCamera.cs">
+    <Files>
+      <File FileName="Assets/FollowCamera.cs" Line="7" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
