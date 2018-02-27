@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour {
 
+    /// <summary>
+    /// 追従対象のオブジェクト
+    /// </summary>
     [SerializeField]
-    private GameObject following;
+    private GameObject following;  
 
+    /// <summary>
+    /// 追従するときのカメラの位置
+    /// </summary>
     private Vector3 cameraPosition;
 
 	// Use this for initialization
