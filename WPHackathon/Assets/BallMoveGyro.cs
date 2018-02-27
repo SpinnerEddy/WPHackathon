@@ -19,7 +19,7 @@ public class BallMoveGyro : MonoBehaviour {
         direct = Vector3.zero;
 
         direct.x = Input.acceleration.x;
-        direct.z = Input.acceleration.z;
+        //direct.z = Input.acceleration.z;
 
         if(direct.sqrMagnitude > 1){
             direct.Normalize();
@@ -28,5 +28,8 @@ public class BallMoveGyro : MonoBehaviour {
         direct *= Time.deltaTime;
 
         this.transform.Translate(direct * speed);
+
+        Debug.Log("X : " + direct.x);
+        //Debug.Log("Z : " + direct.z);
 	}
 }
