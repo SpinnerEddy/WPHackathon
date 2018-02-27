@@ -8,10 +8,13 @@ public class BallMoveGyro : MonoBehaviour {
 
     private Vector3 direct;
 
+    private Rigidbody body;
+
 	// Use this for initialization
 	void Start () {
         speed = 10.0f;
         direct = new Vector3();
+        body = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -25,9 +28,11 @@ public class BallMoveGyro : MonoBehaviour {
             direct.Normalize();
         }
 
-        direct *= Time.deltaTime;
+        //direct *= Time.deltaTime;
 
-        this.transform.Translate(direct * speed);
+        //this.transform.Translate(direct * speed);
+
+        body.AddForce(direct*30);
 
         Debug.Log("X : " + direct.x);
         //Debug.Log("Z : " + direct.z);
