@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
 
     private float _distants;
     private float _height;
+
+    public Text Height;
+    public Text Distants;
 
     // Use this for initialization
     public void Start ()
@@ -17,8 +22,11 @@ public class ScoreManager : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+	    Height.text = _height.ToString(CultureInfo.InvariantCulture);
+	    Distants.text = _distants.ToString(CultureInfo.InvariantCulture);
+        Debug.Log(Distants.text);
 	}
 
     void HeightUpDwon(float d)
