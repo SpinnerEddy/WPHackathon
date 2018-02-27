@@ -1,7 +1,8 @@
-﻿<Properties StartupConfiguration="{586EF9BE-17D6-F9F5-B6BC-44C439E89DF2}|単体テスト">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FollowCamera.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BallMoveGyro.cs">
     <Files>
-      <File FileName="Assets/FollowCamera.cs" Line="7" Column="5" />
+      <File FileName="Assets/FollowCamera.cs" Line="8" Column="13" />
+      <File FileName="Assets/BallMoveGyro.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
