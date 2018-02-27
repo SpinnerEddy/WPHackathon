@@ -17,7 +17,7 @@ public class FollowCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        cameraPosition = new Vector3(0, 1, -10);
+        cameraPosition = new Vector3(0, 6, -14);
 	}
 	
 	// Update is called once per frame
