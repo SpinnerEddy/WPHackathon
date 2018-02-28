@@ -6,7 +6,7 @@ public class Obstacle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        this.transform.position = new Vector3(Random.Range(-40, 40),0,40);
+        //this.transform.position = new Vector3(Random.Range(-40, 40),0,40);
 	}
 	
 	// Update is called once per frame

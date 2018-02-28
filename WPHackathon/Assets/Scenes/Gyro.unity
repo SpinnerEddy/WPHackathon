@@ -509,6 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _obstacle: {fileID: 1696389944012914, guid: 78af1d2e21eb0114cb608a0f6c37bb30, type: 2}
+  plane: {fileID: 1900799867}
 --- !u!4 &1493994629
 Transform:
   m_ObjectHideFlags: 0
@@ -669,7 +670,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4707115630866246, guid: 891a4424bc9ba4a74a7d3fa0866dd6cc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4707115630866246, guid: 891a4424bc9ba4a74a7d3fa0866dd6cc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -695,9 +696,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 54904711500836360, guid: 891a4424bc9ba4a74a7d3fa0866dd6cc,
-        type: 2}
-      propertyPath: m_UseGravity
+    - target: {fileID: 4797841049990040, guid: 891a4424bc9ba4a74a7d3fa0866dd6cc, type: 2}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
