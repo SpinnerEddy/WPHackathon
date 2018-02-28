@@ -14,4 +14,12 @@ public class Obstacle : MonoBehaviour {
 	{
 	    transform.position += new Vector3(0,0,1);
 	}
+
+    private void OnCollisionEnter(Collision other)
+    {
+        //other.transform.GetComponent<きたい>();
+        //heightの減少、または増加
+        //
+
+    }
 }
