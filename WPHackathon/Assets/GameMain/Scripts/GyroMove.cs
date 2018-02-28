@@ -88,7 +88,7 @@ public class GyroMove : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        buoyancy = new Vector3(0,0.01f,0);
+        buoyancy = new Vector3(0,0.02f,0);
         sturdy = 10f;
         speed = 30.0f;
         direct = new Vector3();  //初期化
@@ -96,6 +96,7 @@ public class GyroMove : MonoBehaviour {
         turnAngle = 0f;
         xOff = Random.Range(0, 10000);
         yOff = Random.Range(0, 10000);
+        flyingDistance = 0;
     }
 
     // Update is called once per frame
@@ -121,6 +122,10 @@ public class GyroMove : MonoBehaviour {
         this.transform.rotation = Quaternion.Euler(-10 + 20 * Mathf.PerlinNoise(xOff, yOff), 180f, turnAngle-1+2*Mathf.PerlinNoise(yOff, xOff));
 
         this.transform.position -= buoyancy;
+
+        height = this.transform.position.y;  //高度はy座標
+
+        flyingDistance += 2;  //飛距離
 
         xOff += 0.01f;
         yOff += 0.01f;
