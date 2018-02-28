@@ -11,8 +11,8 @@ public class ScoreManager : MonoBehaviour
     private float _distants;
     private float _height;
 
-    public Text Height;
-    public Text Distants;
+    public UnityEngine.UI.Text Height;
+    public UnityEngine.UI.Text Distants;
 
     // Use this for initialization
     public void Start ()
