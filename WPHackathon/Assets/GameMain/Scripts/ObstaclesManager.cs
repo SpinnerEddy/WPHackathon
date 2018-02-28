@@ -7,8 +7,10 @@ public class ObstaclesManager : MonoBehaviour
 
     [SerializeField] private GameObject _obstacle;
 
-	// Use this for initialization
-	void Start ()
+    [SerializeField] private MainManager mainManager;
+
+    // Use this for initialization
+    void Start ()
 	{
 	    StartCoroutine(CriateObstacle());
 	}
@@ -20,6 +22,11 @@ public class ObstaclesManager : MonoBehaviour
 
     IEnumerator CriateObstacle()
     {
+        while (!mainManager.GetIsReady())
+        {
+            yield return null;
+        }
+
         while (true)
         {
             
