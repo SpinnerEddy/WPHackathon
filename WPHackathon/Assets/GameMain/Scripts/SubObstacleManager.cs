@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SubObstacleManager : MonoBehaviour {
 
-    [SerializeField] private GameObject _obstacle;
+    [SerializeField] private GameObject[] _obstacle;
 
     [SerializeField] private GameObject plane;
+
     // Use this for initialization
     void Start()
     {
@@ -24,9 +25,10 @@ public class SubObstacleManager : MonoBehaviour {
         while (true)
         {
 
-            if (Random.value > 0.3)
+            if (Random.value > 0.7)
             {
-                Instantiate(_obstacle,new Vector3(Random.Range(-40, 40), plane.transform.position.y+Random.Range(-2, 2), 40),this.transform.rotation);
+                int index = (int)Random.Range(0,_obstacle.Length);
+                Instantiate(_obstacle[index],new Vector3(plane.transform.position.x + Random.Range(-40, 40), plane.transform.position.y+Random.Range(-2, 2), 200),_obstacle[index].transform.rotation);
                 //Instantiate(_obstacle, plane.transform.position, this.transform.rotation);
             }
             yield return new WaitForSeconds(0.2f);

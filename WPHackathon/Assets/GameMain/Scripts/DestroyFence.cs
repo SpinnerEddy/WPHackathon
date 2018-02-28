@@ -17,7 +17,7 @@ public class DestroyFence : MonoBehaviour {
     void OnTriggerEnter(Collider c)
     {
 
-        Debug.Log(c.gameObject.tag);
+        //Debug.Log(c.gameObject.tag);
         if (c.gameObject.tag == "Obstacle")
         {
             Destroy(c.gameObject);
