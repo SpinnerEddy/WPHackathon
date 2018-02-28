@@ -15,6 +15,12 @@ public class GyroMove : MonoBehaviour {
     private float progressSpeed;
 
     /// <summary>
+    /// カメラ
+    /// </summary>
+    [SerializeField]
+    private GameObject camera;
+
+    /// <summary>
     /// 高度
     /// </summary>
     private float height;
@@ -135,6 +141,16 @@ public class GyroMove : MonoBehaviour {
     {
         if(other.transform.tag == "Obstacle"){
             body.AddForce(new Vector3(0,-5,0));
+        }
+    }
+
+    private void damageCameraShake(){
+        float amp = 20;
+        float theta = 0;
+        while(amp >= 0){
+            camera.transform.rotation = Quaternion.Euler(0,0, amp * Mathf.Sin(theta));
+            theta++;
+            amp -= 0.5f;
         }
     }
 
