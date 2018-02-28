@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GyroMove : MonoBehaviour {
+public class GyroMove : MonoBehaviour
+{
+    [SerializeField] private MainManager _mainManager;
+
 
     /// <summary>
     /// 物体の移動スピード(旋回)
@@ -103,11 +106,22 @@ public class GyroMove : MonoBehaviour {
         xOff = Random.Range(0, 10000);
         yOff = Random.Range(0, 10000);
         flyingDistance = 0;
+
+
+        height = this.transform.position.y;  //高度はy座標
+
+        flyingDistance += 2;  //飛距離
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!_mainManager.GetIsReady() || _mainManager.GetIsGameOver())
+        {
+            return;
+        }
+
         direct = Vector3.zero;  //初期化
 
         direct.x = Mathf.Clamp(Input.acceleration.x,-1,1);  //ジャイロセンサーの情報を取得

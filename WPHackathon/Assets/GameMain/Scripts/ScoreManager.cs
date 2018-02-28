@@ -24,16 +24,25 @@ public class ScoreManager : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update ()
-	{
-	    if (_mainManager.GetIsGameOver())
-	        return;
-	    _distants = AirPlane.FlyingDistance;
+    void Update()
+    {
+
+        if (_mainManager.GetIsGameOver())
+        {
+            Height.text = "0";
+            return;
+        }
+
+        _distants = AirPlane.FlyingDistance;
 	    _height = AirPlane.Height;
 
 	    Height.text = _height.ToString(CultureInfo.InvariantCulture);
 	    Distants.text = _distants.ToString(CultureInfo.InvariantCulture);
-        Debug.Log(Distants.text);
+
+        if (!_mainManager.GetIsReady())
+        {
+            Distants.text = "0";
+        }
 	}
 
     void HeightUpDwon(float d)
