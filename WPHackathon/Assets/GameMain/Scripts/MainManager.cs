@@ -4,12 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using UnityEngine.SceneManagement;
+
 public class MainManager : MonoBehaviour
 {
     private bool _isReady;
 
     [SerializeField] private Text _countDownText;
     [SerializeField] private GameObject _setumei;
+
+    [SerializeField] private GameObject _gameOverFrame;
+    [SerializeField] private Text _gameOverText;
+
+
 
     public bool GetIsReady()
     {
@@ -24,8 +31,12 @@ public class MainManager : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+        if (true /*ゲームオーバーしたら*/)
+        {
+            StartCoroutine(GameEnd());
+        }
 	}
 
     IEnumerator Ready()
@@ -57,5 +68,21 @@ public class MainManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         _countDownText.text = "";
+    }
+
+    IEnumerator GameEnd()
+    {
+        yield return new WaitForSeconds(1f);
+
+
+        _gameOverFrame.SetActive(true);
+        _gameOverText.text = "ffffm";//すこあ.tostring();
+
+        while (!Input.GetMouseButton(0) && Input.touchCount == 0)
+        {
+            yield return null;
+        }
+        SceneManager.LoadScene("Title");
+
     }
 }
