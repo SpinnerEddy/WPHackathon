@@ -15,6 +15,16 @@ public class GyroMove : MonoBehaviour {
     private float progressSpeed;
 
     /// <summary>
+    /// 高度
+    /// </summary>
+    private float height;
+
+    /// <summary>
+    /// 飛距離
+    /// </summary>
+    private float flyingDistance;
+
+    /// <summary>
     /// 浮力(高度の落ちやすさ)
     /// </summary>
     private Vector3 buoyancy;
