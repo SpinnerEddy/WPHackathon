@@ -89,7 +89,7 @@ public class MainManager : MonoBehaviour
 
 
         _gameOverFrame.SetActive(true);
-        _gameOverText.text = "ffffm";//すこあ.tostring();
+        _gameOverText.text = _scoreManager.GetDistants().ToString() + "m";
 
         while (!Input.GetMouseButton(0) && Input.touchCount == 0)
         {
