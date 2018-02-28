@@ -18,11 +18,36 @@ public class GyroMove : MonoBehaviour {
     /// 高度
     /// </summary>
     private float height;
+    public float Height
+    {
+        get
+        {
+            return height;
+        }
+
+        private set
+        {
+            height = value;
+        }
+    }
 
     /// <summary>
     /// 飛距離
     /// </summary>
     private float flyingDistance;
+    public float FlyingDistance
+    {
+        get
+        {
+            return flyingDistance;
+        }
+
+        private set
+        {
+            flyingDistance = value;
+        }
+    }
+
 
     /// <summary>
     /// 浮力(高度の落ちやすさ)
@@ -58,6 +83,7 @@ public class GyroMove : MonoBehaviour {
     /// The y off of PerlineNoise.
     /// </summary>
     private float yOff;
+
 
     // Use this for initialization
     void Start()

@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    [SerializeField] private GyroMove AirPlane;
+    [SerializeField] private MainManager _mainManager;
 
     private float _distants;
     private float _height;
@@ -24,6 +26,11 @@ public class ScoreManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+	    if (_mainManager.GetIsGameOver())
+	        return;
+	    _distants = AirPlane.FlyingDistance;
+	    _height = AirPlane.Height;
+
 	    Height.text = _height.ToString(CultureInfo.InvariantCulture);
 	    Distants.text = _distants.ToString(CultureInfo.InvariantCulture);
         Debug.Log(Distants.text);
@@ -33,5 +40,15 @@ public class ScoreManager : MonoBehaviour
     {
         _height -= d;
 
+    }
+
+    public float GetHeight()
+    {
+        return _height;
+    }
+
+    public float GetDistants()
+    {
+        return _distants;
     }
 }
