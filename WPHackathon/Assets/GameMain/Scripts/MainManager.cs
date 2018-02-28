@@ -10,13 +10,11 @@ public class MainManager : MonoBehaviour
 {
     private bool _isReady;
 
-    [SerializeField] private Text _countDownText;
+    [SerializeField] private UnityEngine.UI.Text _countDownText;
     [SerializeField] private GameObject _setumei;
 
     [SerializeField] private GameObject _gameOverFrame;
-    [SerializeField] private Text _gameOverText;
-
-
+    [SerializeField] private UnityEngine.UI.Text _gameOverText;
 
     public bool GetIsReady()
     {
