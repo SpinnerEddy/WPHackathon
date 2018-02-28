@@ -1,0 +1,40 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ObstaclesManager : MonoBehaviour
+{
+
+    [SerializeField] private GameObject _obstacle;
+
+    [SerializeField] private MainManager mainManager;
+
+    // Use this for initialization
+    void Start ()
+	{
+	    StartCoroutine(CriateObstacle());
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+    IEnumerator CriateObstacle()
+    {
+        while (!mainManager.GetIsReady())
+        {
+            yield return null;
+        }
+
+        while (true)
+        {
+            
+            if (Random.value > 0.3)
+            {
+                Instantiate(_obstacle);
+            }
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
+}
