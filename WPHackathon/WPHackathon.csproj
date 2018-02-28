@@ -288,8 +288,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SceneChanger.cs" />
-    <Compile Include="Assets\SelectedPlane.cs" />
+    <Compile Include="Assets\Select\SceneChanger.cs" />
+    <Compile Include="Assets\Select\SelectedPlane.cs" />
+    <Compile Include="Assets\Select\Selector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
