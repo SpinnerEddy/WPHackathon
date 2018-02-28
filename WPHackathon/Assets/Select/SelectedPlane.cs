@@ -10,6 +10,4 @@ public class SelectedPlane : MonoBehaviour {
     {
         DontDestroyOnLoad(this);
     }
-
-
 }
