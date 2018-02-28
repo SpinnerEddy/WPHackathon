@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 public class MainManager : MonoBehaviour
 {
     private bool _isReady;
+    private bool _isGameOver;
+
 
     [SerializeField] private UnityEngine.UI.Text _countDownText;
     [SerializeField] private GameObject _setumei;
@@ -16,24 +18,37 @@ public class MainManager : MonoBehaviour
     [SerializeField] private GameObject _gameOverFrame;
     [SerializeField] private UnityEngine.UI.Text _gameOverText;
 
+    [SerializeField] private ScoreManager _scoreManager;
+
+
+
     public bool GetIsReady()
     {
         return _isReady;
     }
 
+    public bool GetIsGameOver()
+    {
+        return _isGameOver;
+    }
+
 
     // Use this for initialization
     void Start ()
-	{
+    {
+        _isReady = false;
+        _isGameOver = false;
 	    StartCoroutine(Ready());
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (true /*ゲームオーバーしたら*/)
+        if (_scoreManager.GetHeight() <= 0)
         {
+            _isGameOver = true;
             StartCoroutine(GameEnd());
+
         }
 	}
 
