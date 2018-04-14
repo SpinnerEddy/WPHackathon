@@ -19,6 +19,7 @@ public class Missile : MonoBehaviour {
             //Destroy(gameObject);
             Destroy(this.gameObject);
             Instantiate(explision, transform.position, Quaternion.identity);
+            Debug.Log("true");
         }
     }
 }

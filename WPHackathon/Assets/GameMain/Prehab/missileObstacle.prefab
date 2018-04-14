@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114250401638773870}
   - component: {fileID: 135725509323484040}
   - component: {fileID: 54603939942388278}
-  - component: {fileID: 114602150633672746}
   m_Layer: 0
   m_Name: missileObstacle
   m_TagString: Obstacle
@@ -39,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1065302936088356}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 40}
+  m_LocalPosition: {x: -2.212677, y: 2.3889403, z: 43.969963}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,21 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1ffb6b27bf68e47accdf6b4513a63e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
   explision: {fileID: 1000014278622898, guid: 58e72316233d6d24e9ad6a13ce5d8d2c, type: 2}
---- !u!114 &114602150633672746
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1065302936088356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8daa48b5497bcc04eac8892ad2675980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadCopy: {fileID: 1000014278622898, guid: 58e72316233d6d24e9ad6a13ce5d8d2c, type: 2}
-  dontDestroy: 0
 --- !u!135 &135725509323484040
 SphereCollider:
   m_ObjectHideFlags: 1

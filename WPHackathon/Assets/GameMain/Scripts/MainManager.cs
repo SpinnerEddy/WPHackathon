@@ -56,6 +56,8 @@ public class MainManager : MonoBehaviour
     {
         _countDownText.text = "";
 
+        yield return new WaitForSeconds(1f);
+
         //最初の説明ポップちゅう
         while (!Input.GetMouseButton(0) && Input.touchCount == 0)
         {

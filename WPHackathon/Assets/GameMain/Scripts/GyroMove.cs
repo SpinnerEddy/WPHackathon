@@ -143,6 +143,7 @@ public class GyroMove : MonoBehaviour
 
         this.transform.position -= buoyancy;
 
+
         height = this.transform.position.y;  //高度はy座標
 
         flyingDistance += 2;  //飛距離
